@@ -22,6 +22,6 @@ client.on('message_create', (message) => {
 client.on('qr', (qr) => {
   qrcode.generate(qr, { small: true });
 });
-
+//
 // Iniciamos el cliente de WhatsApp Web
 client.initialize();
