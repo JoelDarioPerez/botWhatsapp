@@ -55,7 +55,12 @@ client.on("message_create", (message) => {
     const evento = message.body.toUpperCase().split(",");
     eventoGZKH94 = evento[1];
     message.reply(`Estado GZKH94 actualizado a: ${eventoGZKH94}`);
-  } else {
+  } else if (message.body.toUpperCase().startsWith("EVENTOS")) {
+    message.reply(
+      `Estado FXRX62 actualizado a: ${eventoFXRX62}\nEstado GKGH77 actualizado a: ${eventoGKGH77}\nEstado GZKH94 actualizado a: ${eventoGZKH94}`
+    );
+  }
+  else {
     console.log("Mensaje random");
   }
 });
