@@ -22,10 +22,7 @@ const port = 3333;
 let eventoFXRX62 = "0";
 let eventoGKGH77 = "0";
 let eventoGZKH94 = "0";
-<<<<<<< HEAD
 let eventoDPRL96 = "0";
-=======
->>>>>>> 1583e593bf320b0c51c52889f149ba978b9fd3cd
 
 // Variables globales
 let accessToken = null;
