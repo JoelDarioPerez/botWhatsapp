@@ -22,7 +22,10 @@ const port = 3333;
 let eventoFXRX62 = "0";
 let eventoGKGH77 = "0";
 let eventoGZKH94 = "0";
+<<<<<<< HEAD
 let eventoDPRL96 = "0";
+=======
+>>>>>>> 1583e593bf320b0c51c52889f149ba978b9fd3cd
 
 // Variables globales
 let accessToken = null;
@@ -56,6 +59,7 @@ client.on("message_create", (message) => {
     const evento = message.body.toUpperCase().split(",");
     eventoGZKH94 = evento[1];
     message.reply(`Estado GZKH94 actualizado a: ${eventoGZKH94}`);
+<<<<<<< HEAD
   } else if (message.body.toUpperCase().startsWith("DPRL96")) {
     eventoDPRL96 = evento[1];
     message.reply(`Estado actualizado a: ${eventoDPRL96}`);
@@ -63,6 +67,8 @@ client.on("message_create", (message) => {
     message.reply(
       `Estado FXRX62 actualizado a: ${eventoFXRX62}\nEstado GKGH77 actualizado a: ${eventoGKGH77}\nEstado GZKH94 actualizado a: ${eventoGZKH94}\nEstado DPRL96 actualizado a: ${eventoDPRL96}`
     );
+=======
+>>>>>>> 1583e593bf320b0c51c52889f149ba978b9fd3cd
   } else {
     console.log("Mensaje random");
   }
