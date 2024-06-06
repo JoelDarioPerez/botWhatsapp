@@ -22,6 +22,7 @@ const port = 3333;
 let eventoFXRX62 = "0";
 let eventoGKGH77 = "0";
 let eventoGZKH94 = "0";
+let eventoDPRL96 = "0";
 
 // Variables globales
 let accessToken = null;
@@ -55,12 +56,14 @@ client.on("message_create", (message) => {
     const evento = message.body.toUpperCase().split(",");
     eventoGZKH94 = evento[1];
     message.reply(`Estado GZKH94 actualizado a: ${eventoGZKH94}`);
+  } else if (message.body.toUpperCase().startsWith("DPRL96")) {
+    eventoDPRL96 = evento[1];
+    message.reply(`Token Recurso Seguro: ${tokenRecursoSeguro}`);
   } else if (message.body.toUpperCase().startsWith("EVENTOS")) {
     message.reply(
       `Estado FXRX62 actualizado a: ${eventoFXRX62}\nEstado GKGH77 actualizado a: ${eventoGKGH77}\nEstado GZKH94 actualizado a: ${eventoGZKH94}`
     );
-  }
-  else {
+  } else {
     console.log("Mensaje random");
   }
 });
@@ -163,6 +166,8 @@ function sendPositions(data) {
       case "GZKH94":
         evento = eventoGZKH94;
         break;
+      case "DPRL96":
+        evento = eventoDPRL96;
       default:
         evento = "0";
     }
