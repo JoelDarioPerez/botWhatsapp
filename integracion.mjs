@@ -57,11 +57,15 @@ client.on("message_create", (message) => {
     eventoGZKH94 = evento[1];
     message.reply(`Estado GZKH94 actualizado a: ${eventoGZKH94}`);
   } else if (message.body.toUpperCase().startsWith("DPRL96")) {
+    eventoDPRL96 = message.body.toUpperCase().split(", ");
     eventoDPRL96 = evento[1];
     message.reply(`Estado actualizado a: ${eventoDPRL96}`);
   } else if (message.body.toUpperCase().startsWith("EVENTOS")) {
     message.reply(
-      `Estado FXRX62 actualizado a: ${eventoFXRX62}\nEstado GKGH77 actualizado a: ${eventoGKGH77}\nEstado GZKH94 actualizado a: ${eventoGZKH94}\nEstado DPRL96 actualizado a: ${eventoDPRL96}`
+      `Estado FXRX62 actualizado a: ${eventoFXRX62}\n
+      Estado GKGH77 actualizado a: ${eventoGKGH77}\n
+      Estado GZKH94 actualizado a: ${eventoGZKH94}\n
+      Estado DPRL96 actualizado a: ${eventoDPRL96}`
     );
   } else {
     console.log("Mensaje random");
