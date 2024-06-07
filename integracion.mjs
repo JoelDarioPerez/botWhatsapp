@@ -57,7 +57,7 @@ client.on("message_create", (message) => {
     eventoGZKH94 = evento[1];
     message.reply(`Estado GZKH94 actualizado a: ${eventoGZKH94}`);
   } else if (message.body.toUpperCase().startsWith("DPRL96")) {
-    const evento = message.body.toUpperCase().split(", ");
+    const evento = message.body.toUpperCase().split(",");
     eventoDPRL96 = evento[1];
     message.reply(`Estado actualizado a: ${eventoDPRL96}`);
   } else if (message.body.toUpperCase().startsWith("EVENTOS")) {
